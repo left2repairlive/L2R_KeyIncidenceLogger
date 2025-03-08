@@ -12,7 +12,7 @@ Each time the program is closed this way, it will create a timestamped output in
 The *.csv* file holds the results as one key per row and the number of presses it registered for this key. This can be used for further processing if necessary
 
 ### .png output (*NYI*)
-The *.png* file shows an ANSI 101 keyboard layout with a heatmap of how often any key is pressed. This gives a simple, visual overview of the results per key. Implementation for other keyboard layouts is not yet planned. Feel free to fork and implement anything yourself.
+The *.png* file shows an ANSI 104 keyboard layout with a heatmap of how often any key is pressed. This gives a simple, visual overview of the results per key. Implementation for other keyboard layouts is not yet planned. Feel free to fork and implement anything yourself.
 
 ## Info about security
 If concerned, please read through the code. The program only registers how often each key is pressed and writes the final results to the *.csv* and *.png* file, nowhere else! This does not include any order in which the keys are pressed.

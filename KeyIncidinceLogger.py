@@ -1,7 +1,9 @@
 from pynput.keyboard import Key, Listener
 import csv
 import datetime
-
+import json 
+import PIL
+from PIL import Image, ImageDraw, ImageFont
 
 
 # intro
@@ -19,6 +21,7 @@ print("")
 keylog = dict()
 escCount = 0
 timestamp = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
+maxCount = 0
 
 
 
@@ -39,20 +42,70 @@ def safe_exit():
 
 # function for exporting csv
 def write_csv():
+    global maxCount
+
     print("Saving results as .csv ...")
+
     with open(timestamp + '.csv', 'w+', newline='') as csvfile:
         writer = csv.writer(csvfile)
         for key in keylog:
-            writer.writerow([key, keylog[key]])
+            count = keylog[key]
+            writer.writerow([key, count])
+            if(count > maxCount):
+                maxCount = count
+
     print("DONE")
     print("")
-
+    
 
 
 # function for exporting png
 def write_png():
     print("Saving results as keymap .png ...")
-    print("NYI")
+    
+    with open('ANSI104.json') as jsonfile:
+        jsonData = json.load(jsonfile)
+
+        gridSize = jsonData['board']['gridSize']
+        imageWidth = jsonData['board']['width'] * gridSize
+        imageHeight = jsonData['board']['height'] * gridSize
+
+        image = Image.new("RGB", (int(imageWidth), int(imageHeight)), "#444444")
+        draw = ImageDraw.Draw(image)
+        font = ImageFont.truetype("arial.ttf", 19)
+
+        keysData = jsonData['keys']
+
+        for key in keysData:
+            keyID = key['keyID']
+            keyLabel = key['keyLabel']
+            
+            keyX = key['x'] * gridSize
+            keyY = key['y'] * gridSize
+
+            keyWidth = 1 * gridSize
+            if('width' in key):
+                keyWidth = key['width'] * gridSize
+            
+            keyHeight = 1 * gridSize
+            if('height' in key):
+                keyHeight = key['height'] * gridSize
+            
+            keyCount = 0
+            if(keyID in keylog):
+                keyCount = keylog[keyID]
+            keyHeat = keyCount / maxCount
+
+            if(keyCount > 0):
+                keyLabel = keyLabel + "/" + str(keyCount)
+
+            keyShape = (keyX, keyY, keyX + keyWidth, keyY + keyHeight)
+            draw.rectangle(keyShape, fill=(int(255 * keyHeat), 0, 0), outline="#000000")
+            draw.text((keyX + 2, keyY + 2), keyLabel, "#FFFFFF", font = font)
+            
+        image.save(timestamp + ".png", "PNG")
+
+    print("DONE")
     print("")
 
 
@@ -62,6 +115,9 @@ def on_press(key):
     global escCount
     global keylog
 
+    currentIncidince = keylog.get(str(key), 0)
+    keylog[str(key)] = currentIncidince + 1
+
     if str(key) == "Key.esc":
         escCount = escCount + 1
     else:
@@ -69,11 +125,6 @@ def on_press(key):
 
     if escCount >= 3:
         safe_exit()
-        
-
-    currentIncidince = keylog.get(key, 0)
-    keylog[key] = currentIncidince + 1
-
 
 
 # add key listener

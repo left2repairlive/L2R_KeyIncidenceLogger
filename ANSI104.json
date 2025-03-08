@@ -1,0 +1,145 @@
+{
+    "board":
+    {
+        "gridSize":100,
+        "width":22.5,
+        "height":6.5
+    },  
+
+    "keys":
+    [
+        {"keyID":"Key.esc", "keyLabel":"ESC", "x":0, "y":0},
+        {"keyID":"Key.f1", "keyLabel":"F1", "x":2, "y":0},
+        {"keyID":"Key.f2", "keyLabel":"F2", "x":3, "y":0},
+        {"keyID":"Key.f3", "keyLabel":"F3", "x":4, "y":0},
+        {"keyID":"Key.f4", "keyLabel":"F4", "x":5, "y":0},
+        {"keyID":"Key.f5", "keyLabel":"F5", "x":6.5, "y":0},
+        {"keyID":"Key.f6", "keyLabel":"F6", "x":7.5, "y":0},
+        {"keyID":"Key.f7", "keyLabel":"F7", "x":8.5, "y":0},
+        {"keyID":"Key.f8", "keyLabel":"F8", "x":9.5, "y":0},
+        {"keyID":"Key.f9", "keyLabel":"F9", "x":11, "y":0},
+        {"keyID":"Key.f10", "keyLabel":"F10", "x":12, "y":0},
+        {"keyID":"Key.f11", "keyLabel":"F11", "x":13, "y":0},
+        {"keyID":"Key.f12", "keyLabel":"F12", "x":14, "y":0},
+
+        {"keyID":"Key.print", "keyLabel":"PrtSc", "x":15.25, "y":0},
+        {"keyID":"Key.scroll_lock", "keyLabel":"Scroll\nLock", "x":16.25, "y":0},
+        {"keyID":"Key.pause", "keyLabel":"Pause", "x":17.25, "y":0},
+
+
+        
+        {"keyID":"'`'", "keyLabel":"`", "x":0, "y":1.5},
+        {"keyID":"'1'", "keyLabel":"1", "x":1, "y":1.5},
+        {"keyID":"'2'", "keyLabel":"2", "x":2, "y":1.5},
+        {"keyID":"'3'", "keyLabel":"3", "x":3, "y":1.5},
+        {"keyID":"'4'", "keyLabel":"4", "x":4, "y":1.5},
+        {"keyID":"'5'", "keyLabel":"5", "x":5, "y":1.5},
+        {"keyID":"'6'", "keyLabel":"6", "x":6, "y":1.5},
+        {"keyID":"'7'", "keyLabel":"7", "x":7, "y":1.5},
+        {"keyID":"'8'", "keyLabel":"8", "x":8, "y":1.5},
+        {"keyID":"'9'", "keyLabel":"9", "x":9, "y":1.5},
+        {"keyID":"'0'", "keyLabel":"0", "x":10, "y":1.5},
+        {"keyID":"'-'", "keyLabel":"-", "x":11, "y":1.5},
+        {"keyID":"'='", "keyLabel":"=", "x":12, "y":1.5},
+        {"keyID":"Key.backspace", "keyLabel":"Backspace", "x":13, "y":1.5, "width":2},
+        
+        {"keyID":"Key.ins", "keyLabel":"Insert", "x":15.25, "y":1.5},
+        {"keyID":"Key.home", "keyLabel":"Home", "x":16.25, "y":1.5},
+        {"keyID":"Key.pgup", "keyLabel":"Page\nUp", "x":17.25, "y":1.5},
+
+
+
+        {"keyID":"Key.tab", "keyLabel":"Tab", "x":0, "y":2.5, "width":1.5},
+        {"keyID":"'q'", "keyLabel":"Q", "x":1.5, "y":2.5},
+        {"keyID":"'w'", "keyLabel":"W", "x":2.5, "y":2.5},
+        {"keyID":"'e'", "keyLabel":"E", "x":3.5, "y":2.5},
+        {"keyID":"'r'", "keyLabel":"R", "x":4.5, "y":2.5},
+        {"keyID":"'t'", "keyLabel":"T", "x":5.5, "y":2.5},
+        {"keyID":"'y'", "keyLabel":"Y", "x":6.5, "y":2.5},
+        {"keyID":"'u'", "keyLabel":"U", "x":7.5, "y":2.5},
+        {"keyID":"'i'", "keyLabel":"I", "x":8.5, "y":2.5},
+        {"keyID":"'o'", "keyLabel":"O", "x":9.5, "y":2.5},
+        {"keyID":"'p'", "keyLabel":"P", "x":10.5, "y":2.5},
+        {"keyID":"'['", "keyLabel":"[", "x":11.5, "y":2.5},
+        {"keyID":"']'", "keyLabel":"]", "x":12.5, "y":2.5},
+        {"keyID":"'\\\\'", "keyLabel":"\\", "x":13.5, "y":2.5, "width":1.5},
+
+        {"keyID":"Key.del", "keyLabel":"Delete", "x":15.25, "y":2.5},
+        {"keyID":"Key.home", "keyLabel":"End", "x":16.25, "y":2.5},
+        {"keyID":"Key.pgdn", "keyLabel":"Page\nDown", "x":17.25, "y":2.5},
+
+
+
+        {"keyID":"Keys.caps_lock", "keyLabel":"CAPS", "x":0, "y":3.5, "width":1.75},
+        {"keyID":"'a'", "keyLabel":"A", "x":1.75, "y":3.5},
+        {"keyID":"'s'", "keyLabel":"S", "x":2.75, "y":3.5},
+        {"keyID":"'d'", "keyLabel":"D", "x":3.75, "y":3.5},
+        {"keyID":"'f'", "keyLabel":"F", "x":4.75, "y":3.5},
+        {"keyID":"'g'", "keyLabel":"G", "x":5.75, "y":3.5},
+        {"keyID":"'h'", "keyLabel":"H", "x":6.75, "y":3.5},
+        {"keyID":"'j'", "keyLabel":"J", "x":7.75, "y":3.5},
+        {"keyID":"'k'", "keyLabel":"K", "x":8.75, "y":3.5},
+        {"keyID":"'l'", "keyLabel":"L", "x":9.75, "y":3.5},
+        {"keyID":"';'", "keyLabel":";", "x":10.75, "y":3.5},
+        {"keyID":"\"\"'\"\"", "keyLabel":"'", "x":11.75, "y":3.5},
+        {"keyID":"Key.enter", "keyLabel":"Enter", "x":12.75, "y":3.5, "width":2.25},
+        
+
+
+
+        {"keyID":"Keys.shift", "keyLabel":"Shift", "x":0, "y":4.5, "width":2.25},
+        {"keyID":"'z'", "keyLabel":"Z", "x":2.25, "y":4.5},
+        {"keyID":"'x'", "keyLabel":"X", "x":3.25, "y":4.5},
+        {"keyID":"'c'", "keyLabel":"C", "x":4.25, "y":4.5},
+        {"keyID":"'v'", "keyLabel":"V", "x":5.25, "y":4.5},
+        {"keyID":"'b'", "keyLabel":"B", "x":6.25, "y":4.5},
+        {"keyID":"'n'", "keyLabel":"N", "x":7.25, "y":4.5},
+        {"keyID":"'m'", "keyLabel":"M", "x":8.25, "y":4.5},
+        {"keyID":"\"','\"", "keyLabel":",", "x":9.25, "y":4.5},
+        {"keyID":"'.'", "keyLabel":".", "x":10.25, "y":4.5},
+        {"keyID":"'/'", "keyLabel":"/", "x":11.25, "y":4.5},
+        {"keyID":"Keys.shift_r", "keyLabel":"Shift", "x":12.25, "y":4.5, "width":2.75},
+        
+        {"keyID":"Keys.ctrl_l", "keyLabel":"Ctrl", "x":0, "y":5.5, "width":1.25},
+        {"keyID":"Keys.cmd", "keyLabel":"Win", "x":1.25, "y":5.5, "width":1.25},
+        {"keyID":"Keys.alt_l", "keyLabel":"Alt", "x":2.5, "y":5.5, "width":1.25},
+        {"keyID":"Keys.space", "keyLabel":"", "x":3.75, "y":5.5, "width":6.25},
+        {"keyID":"Keys.alt_gr", "keyLabel":"Alt", "x":10, "y":5.5, "width":1.25},
+        {"keyID":"Keys.cmd", "keyLabel":"Win", "x":11.25, "y":5.5, "width":1.25},
+        {"keyID":"Keys.menu", "keyLabel":"Menu", "x":12.5, "y":5.5, "width":1.25},
+        {"keyID":"Keys.ctrl_r", "keyLabel":"Ctrl", "x":13.75, "y":5.5, "width":1.25},
+
+
+
+
+        {"keyID":"Keys.left", "keyLabel":"Left", "x":15.25, "y":5.5},
+        {"keyID":"Keys.up", "keyLabel":"Up", "x":16.25, "y":4.5},
+        {"keyID":"Keys.down", "keyLabel":"Down", "x":16.25, "y":5.5},
+        {"keyID":"Keys.right", "keyLabel":"Right", "x":17.25, "y":5.5},
+
+        
+
+        {"keyID":"Key.num_lock", "keyLabel":"Num\nLock", "x":18.5, "y":1.5},
+        {"keyID":"Key.num_divide", "keyLabel":"/", "x":19.5, "y":1.5},
+        {"keyID":"Key.num_multi", "keyLabel":"*", "x":20.5, "y":1.5},
+        {"keyID":"Key.num_minus", "keyLabel":"-", "x":21.5, "y":1.5},
+        
+        {"keyID":"Key.num_7", "keyLabel":"7", "x":18.5, "y":2.5},
+        {"keyID":"Key.num_8", "keyLabel":"8", "x":19.5, "y":2.5},
+        {"keyID":"Key.num_9", "keyLabel":"9", "x":20.5, "y":2.5},
+        {"keyID":"Key.num_plus", "keyLabel":"+", "x":21.5, "y":2.5, "height":2},
+        
+        {"keyID":"Key.num_4", "keyLabel":"4", "x":18.5, "y":3.5},
+        {"keyID":"Key.num_5", "keyLabel":"5", "x":19.5, "y":3.5},
+        {"keyID":"Key.num_6", "keyLabel":"6", "x":20.5, "y":3.5},
+        
+        {"keyID":"Key.num_1", "keyLabel":"1", "x":18.5, "y":4.5},
+        {"keyID":"Key.num_2", "keyLabel":"2", "x":19.5, "y":4.5},
+        {"keyID":"Key.num_3", "keyLabel":"3", "x":20.5, "y":4.5},
+        {"keyID":"Key.num_enter", "keyLabel":"Enter", "x":21.5, "y":4.5, "height":2},
+
+        {"keyID":"Key.num_0", "keyLabel":"0", "x":18.5, "y":5.5, "width":2},
+        {"keyID":"Key.num_del", "keyLabel":"Del", "x":20.5, "y":5.5}
+        
+   ]
+}
