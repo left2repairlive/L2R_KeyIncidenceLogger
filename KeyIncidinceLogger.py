@@ -12,7 +12,7 @@ print("== Key Incidence Logger ==")
 print("==    by Left2Repair    ==")
 print("==========================")
 print("")
-print("Press ESC three times in a row to exit!")
+print("Press ESC ten times in a row to exit!")
 print("")
 
 
@@ -123,7 +123,7 @@ def on_press(key):
     else:
         escCount = 0
 
-    if escCount >= 3:
+    if escCount >= 10:
         safe_exit()
 
 

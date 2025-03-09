@@ -4,7 +4,7 @@ I wrote this Python program to log which keys I actually need during a gaming se
 ## Usage
 Simply start the program by running ```python ./KeyIncidinceLogger``` via a terminal. The program will run in the background and count how many times each key is pressed.
 
-To stop the program, click ***Esc*** three times in a row.
+To stop the program, click ***Esc*** ten times in a row.
 
 Each time the program is closed this way, it will create a timestamped output in from of a .csv table as well as a .png image of the results.
 
