@@ -2,6 +2,7 @@ from pynput.keyboard import Key, Listener
 import csv
 import datetime
 import json 
+import math
 import PIL
 from PIL import Image, ImageDraw, ImageFont
 
@@ -100,14 +101,13 @@ def write_png():
                 keyLabel = keyLabel + "/" + str(keyCount)
 
             keyShape = (keyX, keyY, keyX + keyWidth, keyY + keyHeight)
-            draw.rectangle(keyShape, fill=(int(255 * keyHeat), 0, 0), outline="#000000")
+            draw.rectangle(keyShape, fill=(int(math.ceil(keyHeat) * 32 + 223 * keyHeat), 0, 0), outline="#000000")
             draw.text((keyX + 2, keyY + 2), keyLabel, "#FFFFFF", font = font)
             
         image.save(timestamp + ".png", "PNG")
 
     print("DONE")
     print("")
-
 
 
 # function for how to process a keystroke
@@ -130,4 +130,3 @@ def on_press(key):
 # add key listener
 with Listener(on_press=on_press) as listener:
     listener.join()
-
